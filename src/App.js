@@ -2,12 +2,7 @@
 function App() {
   return (
     <section className="container">
-      <h1>Hello World</h1>
-      <h2>Hello World</h2>
-      <h3>Hello World</h3>
-      <h4>Hello World</h4>
-      <h5>Hello World</h5>
-      <h6>Hello World</h6>
+      <h1>Explore o universo</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu ante ut enim facilisis laoreet. 
         Vivamus ac cursus augue, sit amet convallis metus. Phasellus eget ligula id sem fermentum lacinia nec 
