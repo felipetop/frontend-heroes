@@ -1,8 +1,11 @@
 
+import logo from './assets/images/logo/Marvel.svg';
+
 function App() {
   return (
     <section className="container">
-      <h1>Explore o universo</h1>
+      <img className="center logo marvel" src={logo} alt="Logo" />
+      <h1 className="text-center">Explore o universo</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu ante ut enim facilisis laoreet. 
         Vivamus ac cursus augue, sit amet convallis metus. Phasellus eget ligula id sem fermentum lacinia nec 
