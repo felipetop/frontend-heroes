@@ -48,7 +48,11 @@ body {
         margin-right: auto;
         max-width: 1200px;
         width: 100%;
-        padding: 0px 25px;
+    }
+
+    .block-example {
+        background-color: pink;
+        padding: 10px;
     }
 
     footer {
@@ -68,4 +72,7 @@ body {
         box-sizing:border-box;
     }
 
+    .mt-50 {
+        margin-top: 30px;
+    }
 }
