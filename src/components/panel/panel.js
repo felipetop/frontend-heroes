@@ -3,12 +3,16 @@ import styled from "styled-components";
 
 const PanelGrid = styled.div`
   display: grid;
+  margin-left: -${props => props.horizontalMargin}px;
+  margin-right: -${props => props.horizontalMargin}px;
   grid-template-columns: repeat(${props => props.grids}, 1fr);
   >* {
-    margin: ${props => props.verticalMargin}px ${props => props.horizontalMargin}px;
+    margin: 
+    0px
+    ${props => props.horizontalMargin}px 
+    ${props => props.bottomMargin}px 
+    ${props => props.horizontalMargin}px;
   }
-  >:nth-child(${props => props.grids}n+1) { margin-left: 0px;}
-  >:nth-child(${props => props.grids}n+${props => props.grids}) { margin-right: 0px;}
 `;
 
 class Panel extends Component {
@@ -18,6 +22,7 @@ class Panel extends Component {
         grids={this.props.grids}
         horizontalMargin={this.props.horizontalMargin}
         verticalMargin={this.props.verticalMargin}
+        bottomMargin={this.props.bottomMargin}
       >
         {this.props.children}
       </PanelGrid>
