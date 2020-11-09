@@ -6,6 +6,9 @@ const PanelGrid = styled.div`
   margin-left: -${props => props.horizontalMargin}px;
   margin-right: -${props => props.horizontalMargin}px;
   grid-template-columns: repeat(${props => props.grids}, 1fr);
+  @media(max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   >* {
     margin: 
     0px

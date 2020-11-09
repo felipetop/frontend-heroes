@@ -48,6 +48,7 @@ body {
         margin-right: auto;
         max-width: 1200px;
         width: 100%;
+        padding: 20px;
     }
 
     footer {
@@ -59,7 +60,8 @@ body {
 
     .logo {
         &.marvel {
-            width: 300px;
+            max-width: 300px;
+            width: 100%;
         }
     }
 
