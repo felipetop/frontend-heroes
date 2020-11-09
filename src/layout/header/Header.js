@@ -1,19 +1,22 @@
+import React, { Component } from 'react';
 import logo from '../../assets/images/logo/Marvel.svg';
-import Search from '../../components/search/search.js';
+import { NavLink } from 'react-router-dom';
 
-function Header() {
+class Header extends Component {
+  render() {
     return (
       <header className="container">
-        <img className="center logo marvel" src={logo} alt="Logo" />
-        <h1 className="text-center">Explore o universo</h1>
-        <p className="text-center">
-          Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - 
-          e aqueles que você descobrirá em breve!
-        </p>
-        <Search/>
+        <NavLink exatc to="./">
+          <img className="center logo marvel" src={logo} alt="Logo" />
+        </NavLink>
+        <h1 className="text-center">{this.props.title}</h1>
+        <div>
+          {this.props.children}
+        </div>
       </header>
     );
   }
+}
   
-  export default Header;
+export default Header;
   
