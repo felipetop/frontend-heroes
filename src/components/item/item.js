@@ -10,7 +10,9 @@ class Panel extends Component {
           <img src={image}/>
           <div className="itemText"> 
             <h3>Star - Lord</h3>
-            <div>Heart</div>
+            <div>
+              <input type="checkbox"/>
+            </div>
           </div>
         </div>
       </div>

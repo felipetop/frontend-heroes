@@ -1,34 +1,21 @@
 import React, { Component } from 'react';
-import styled from "styled-components";
-
-const PanelGrid = styled.div`
-  display: grid;
-  margin-left: -${props => props.horizontalMargin}px;
-  margin-right: -${props => props.horizontalMargin}px;
-  grid-template-columns: repeat(${props => props.grids}, 1fr);
-  @media(max-width: 800px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  >* {
-    margin: 
-    0px
-    ${props => props.horizontalMargin}px 
-    ${props => props.bottomMargin}px 
-    ${props => props.horizontalMargin}px;
-  }
-`;
+import './panel.scss';
 
 class Panel extends Component {
   render() {
     return (
-      <PanelGrid 
-        grids={this.props.grids}
-        horizontalMargin={this.props.horizontalMargin}
-        verticalMargin={this.props.verticalMargin}
-        bottomMargin={this.props.bottomMargin}
-      >
-        {this.props.children}
-      </PanelGrid>
+      <div className={this.props.className}>
+        <aside className="Panel">
+          <div className="column grey">Encontrados 20 heróis</div>
+          <div className="column">
+            <div>Ordernar por nome - A/Z</div>
+            <div>
+              <input type="checkbox"/>
+            </div>
+            <div>Somente favoritos</div>
+          </div>
+        </aside>
+      </div>
     );
   }
 }

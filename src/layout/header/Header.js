@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <header className="container">
+      <header className={this.props.className}>
         <NavLink exatc to="./">
           <img className="center logo marvel" src={logo} alt="Logo" />
         </NavLink>
