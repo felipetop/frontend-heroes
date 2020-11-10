@@ -1,4 +1,3 @@
-import './search.scss';
 import icon from './icon.png';
 
 function Search() {

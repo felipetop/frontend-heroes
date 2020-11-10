@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 class NoMatch extends Component {
   render() {
     return (
-      <React.StrictMode>
+      <div className="FrontendHeroes">
         <Header title="404 - Pagina nao encontrada"/>
         <section className="container mt-50">
           <p className="text-center">
@@ -14,7 +14,7 @@ class NoMatch extends Component {
           </p>
         </section>
         <Footer/>
-      </React.StrictMode>
+      </div>
     );
   }
 }

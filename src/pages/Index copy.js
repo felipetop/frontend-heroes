@@ -8,7 +8,7 @@ import Panel from '../components/panel/panel.js';
 
 function Index() {
   return (
-    <div className="FrontendHeroes">
+    <React.StrictMode>
       <Header className="container" title="Explore o universo">
         <p className="text-center">
           Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - 
@@ -29,7 +29,7 @@ function Index() {
         </GridContainer>
       </section>
       <Footer/>
-    </div>
+    </React.StrictMode>
   );
 }
 

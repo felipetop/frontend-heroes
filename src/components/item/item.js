@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './item.scss';
 import image from './example.png';
 
 class Panel extends Component {

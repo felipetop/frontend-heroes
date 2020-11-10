@@ -4,6 +4,7 @@ import './assets/css/index.scss';
 import reportWebVitals from './reportWebVitals';
 import Pages from './pages/Pages.js';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Pages />

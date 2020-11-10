@@ -1,12 +1,14 @@
-.Item {
-    margin-bottom: 40px;
-    img {
-        width: 100%;
-        border-bottom: solid 5px #e92429;
-    }
-    .itemText {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.FrontendHeroes {
+    .Item {
+        margin-bottom: 40px;
+        img {
+            width: 100%;
+            border-bottom: solid 5px #e92429;
+        }
+        .itemText {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }
