@@ -6,6 +6,7 @@ import Item from '../components/item/item';
 import Search from '../components/search/search.js';
 import Panel from '../components/panel/panel.js';
 import axios from 'axios';
+import Helmet from 'react-helmet';
 
 function Index() {
   const [heroList, setHeroList] = useState([]);
@@ -34,22 +35,29 @@ function Index() {
   }
 
   return (
-    <div className="FrontendHeroes">
-      <Header className="container" title="Explore o universo">
-        <p className="text-center">
-          Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - 
-          e aqueles que você descobrirá em breve!
-        </p>
-        <Search/>
-      </Header>
-      <Panel className="container mt-50" />
-      <section className="container">
-        <GridContainer grids={4} mobileGrids={2} verticalMargin={5} horizontalMargin={25} bottomMargin={40}>
-          {renderHeroes()}
-        </GridContainer>
-      </section>
-      <Footer/>
-    </div>
+    <React.StrictMode>
+      <Helmet>
+          <title>Frontend Heroes</title>
+          <meta name="description" content="Mergulhe no domínio deslumbrante de todos os personagens clássicos da Marvel que você ama - e aqueles que você descobrirá em breve!" />
+          <meta name="keywords" content="Marvel, Heróis, Personagens, Clássicos, Heróis da Marvel, Site Marvel" />
+      </Helmet>
+      <div className="FrontendHeroes">
+        <Header className="container" title="Explore o universo">
+          <p className="text-center">
+            Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - 
+            e aqueles que você descobrirá em breve!
+          </p>
+          <Search/>
+        </Header>
+        <Panel className="container mt-50" />
+        <section className="container">
+          <GridContainer grids={4} mobileGrids={2} verticalMargin={5} horizontalMargin={25} bottomMargin={40}>
+            {renderHeroes()}
+          </GridContainer>
+        </section>
+        <Footer/>
+      </div>
+    </React.StrictMode>
   );
 }
 

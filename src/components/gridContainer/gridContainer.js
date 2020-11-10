@@ -19,20 +19,18 @@ const Container = styled.div`
   }
 `;
 
-class GridContainer extends Component {
-  render() {
-    return (
-      <Container 
-        grids={this.props.grids}
-        horizontalMargin={this.props.horizontalMargin}
-        verticalMargin={this.props.verticalMargin}
-        bottomMargin={this.props.bottomMargin}
-        mobileGrids={this.props.mobileGrids}
-      >
-        {this.props.children}
-      </Container>
-    );
-  }
+function GridContainer(props) {
+  return (
+    <Container 
+      grids={props.grids}
+      horizontalMargin={props.horizontalMargin}
+      verticalMargin={props.verticalMargin}
+      bottomMargin={props.bottomMargin}
+      mobileGrids={props.mobileGrids}
+    >
+      {props.children}
+    </Container>
+  );
 }
   
 export default GridContainer;
