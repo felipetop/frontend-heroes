@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class Panel extends Component {
-  render() {
+function Panel(props) {
+    const [checked, setChecked] = useState(false);
     return (
       <div className="Item">
         <div>
-          <img src={this.props.image}/>
+          <img src={props.image}/>
           <div className="itemText"> 
-            <h3>{this.props.name}</h3>
+            <h3>{props.name}</h3>
             <div>
-              <input type="checkbox"/>
+              <input type="checkbox"
+                checked={checked}
+                onChange={() => setChecked(!checked)}
+              />
             </div>
           </div>
         </div>
       </div>
     );
-  }
 }
   
 export default Panel;
