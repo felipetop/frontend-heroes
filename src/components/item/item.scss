@@ -4,6 +4,9 @@
         img {
             width: 100%;
             border-bottom: solid 5px #e92429;
+            min-height: 253px;
+            max-height: 253px;
+            object-fit: cover;
         }
         .itemText {
             display: flex;
