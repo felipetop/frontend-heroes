@@ -12,7 +12,7 @@ function Index() {
   const [heroList, setHeroList] = useState([]);
 
   useEffect(() => {
-    axios.get('https://gateway.marvel.com/v1/public/characters?ts=1&limit=20&apikey=edc13921ce2d3563dcd2a150281f5c23&hash=1acefe488f2631cef41c7443649d0483')
+    axios.get(`https://gateway.marvel.com/v1/public/characters/1017100?ts=1&limit=20&apikey=edc13921ce2d3563dcd2a150281f5c23&hash=1acefe488f2631cef41c7443649d0483`)
     .then(function (response) {
       // handle success
       console.log(response.data.data.results);
@@ -28,7 +28,7 @@ function Index() {
     return heroList.map((hero) => {
       return (
         <div>
-          <Item id={hero.id} name={ hero.name } image={hero.thumbnail.path+'.'+hero.thumbnail.extension} />
+          <Item name={ hero.name } image={hero.thumbnail.path+'.'+hero.thumbnail.extension} />
         </div>
       )
     });
@@ -42,16 +42,9 @@ function Index() {
           <meta name="keywords" content="Marvel, Heróis, Personagens, Clássicos, Heróis da Marvel, Site Marvel" />
       </Helmet>
       <div className="FrontendHeroes">
-        <Header className="container" title="Explore o universo">
-          <p className="text-center">
-            Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - 
-            e aqueles que você descobrirá em breve!
-          </p>
-          <Search/>
-        </Header>
-        <Panel className="container mt-50" />
+        <Header className="container" title="Explore o universo"/>
         <section className="container">
-          <GridContainer grids={4} mobileGrids={2} verticalMargin={5} horizontalMargin={25} bottomMargin={40}>
+          <GridContainer grids={2} mobileGrids={2} verticalMargin={5} horizontalMargin={25} bottomMargin={40}>
             {renderHeroes()}
           </GridContainer>
         </section>

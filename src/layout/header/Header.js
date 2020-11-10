@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
       <header className={this.props.className}>
-        <NavLink exatc to="./">
+        <NavLink exatc to="/">
           <img className="center logo marvel" src={logo} alt="Logo" />
         </NavLink>
         <h1 className="text-center">{this.props.title}</h1>
