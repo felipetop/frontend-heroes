@@ -9,7 +9,7 @@ function Panel(props) {
         <div className="column grey">Encontrados 20 heróis</div>
         <div className="column">
           <div>Ordernar por nome - A/Z</div>
-          <div> <CheckboxHeart className="mr-10" id="favoritos" /> Somente favoritos</div>
+          <div> <CheckboxHeart size={20} className="mr-10" id="favoritos" /> Somente favoritos</div>
         </div>
       </aside>
     </div>

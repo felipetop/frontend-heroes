@@ -13,7 +13,7 @@ function Item(props) {
           <div className="itemText"> 
             <h3>{props.name}</h3>
             <div>
-              <CheckboxHeart id={props.id} />
+              <CheckboxHeart size={20} id={props.id} />
             </div>
           </div>
         </div>

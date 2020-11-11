@@ -39,6 +39,7 @@ function Index(props) {
           <SingleItem
             name={ hero.name }
             description={ hero.description }
+            id={ hero.id }
             storiesListLength={ storiesList.length }
             seriesListLength={ seriesList.length }
             image={hero.thumbnail.path+'.'+hero.thumbnail.extension}

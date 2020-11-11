@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import GridContainer from '../../components/gridContainer/GridContainer'
+import CheckboxHeart from '../../components/checkboxHeart/CheckboxHeart'
 
 function SingleItem(props) {
-    const [checked, setChecked] = useState(false);
     return (
-      <div className="SingleItem">
+      <section className="SingleItem">
         <div className="details">
           <div className="left-item">
-            <h1>{ props.name }</h1>
+            <header>
+              <h1>{ props.name }</h1>
+              <CheckboxHeart size={30} id={props.id} />
+            </header>
             <p>{ props.description }</p>
             <div className="item-data">
               <div>
@@ -32,7 +35,7 @@ function SingleItem(props) {
             })}
           </GridContainer>
         </div>
-      </div>
+      </section>
     );
 }
   
