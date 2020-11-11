@@ -46,5 +46,26 @@
             font-weight: bold;
         }
 
+        &.white {
+            background-color: white;
+            margin-top: 0px;
+            max-width: 600px;
+            margin-left: initial;
+            input {
+                color: $hero-text-secondary;
+            }
+            ::placeholder {
+                color: $hero-text-secondary;     
+            }
+            
+            :-ms-input-placeholder {
+                color: $hero-text-secondary;
+            }
+            
+            ::-ms-input-placeholder {
+                color: $hero-text-secondary;
+            }
+        }
+
     }
 }

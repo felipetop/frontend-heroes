@@ -1,8 +1,41 @@
 .FrontendHeroes {
-    .logo {
-        &.marvel {
-            max-width: 350px;
-            width: 100%;
+    .Header-v1 {
+        .logo {
+            &.marvel {
+                max-width: 300px;
+                width: 100%;
+            }
         }
-    }   
+    }
+    .Header-v2 {
+        display: flex;
+        margin-bottom: 50px;
+        margin-left: -30px;
+        margin-right: -30px;
+        .head-logo, .head-content {
+            display: flex;
+            align-items: center;
+        }
+        .header-content {
+            width: 100%;
+            margin-left: 90px;
+        }
+    }
+
+    @media(max-width: 800px) {
+        .Header-v2 {
+            margin:0px;
+            margin-bottom: 50px;
+            flex-direction: column;
+            .head-logo, .head-content {
+                justify-content: center;
+            }
+            .head-logo {
+                margin-bottom: 30px;
+            }
+            .header-content {
+                margin-left: 0px;
+            }
+        }
+    }
 }

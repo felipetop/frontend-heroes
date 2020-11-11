@@ -5,6 +5,7 @@
   import axios from 'axios';
   import Helmet from 'react-helmet';
   import { useParams } from "react-router-dom";
+import Search from '../components/search/Search';
 
   function Index(props) {
     const [heroList, setHeroList] = useState([]);
@@ -55,7 +56,9 @@
     return (
       <React.StrictMode>
         <div className="FrontendHeroes background-grey">
-          <Header className="container"/>
+          <Header className="container">
+            <Search className="white" />
+          </Header>
           {renderHeroes()}
           <Footer/>
         </div>
