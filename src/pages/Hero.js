@@ -46,7 +46,7 @@ import Search from '../components/search/Search';
               storiesListLength={ storiesList.length }
               seriesListLength={ seriesList.length }
               image={hero.thumbnail.path+'.'+hero.thumbnail.extension}
-              storiesList={storiesList.slice(0, 10)}
+              storiesList={storiesList.slice(0, 7)}
             />
           </React.StrictMode>
         )

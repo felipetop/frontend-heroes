@@ -31,7 +31,7 @@ function SingleItem(props) {
           </div>
           <div className="lancamentos">
             <h2>Últimos lançamentos</h2>
-            <GridContainer maxWidth={150} grids={6} mobileGrids={2} topMargin={80} horizontalMarginItemMobile={30} bottomMarginItem={50}>
+            <GridContainer maxWidth={150} grids={6} mobileGrids={2} topMargin={80} horizontalMarginItemMobile={5} bottomMarginItem={50}>
               {props.storiesList.map(function (storie) {
                 return (
                   <Stories image={storieImage} name={storie.name} />

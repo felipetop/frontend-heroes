@@ -51,7 +51,7 @@ function Index() {
         </Header>
         <Panel className="container mt-50" />
         <section className="container">
-          <GridContainer grids={4} mobileGrids={2} horizontalMarginItem={25} bottomMarginItem={40}>
+          <GridContainer grids={4} mobileGrids={2} horizontalMarginItemMobile={5} horizontalMarginItem={25} bottomMarginItem={40}>
             {renderHeroes()}
           </GridContainer>
         </section>
