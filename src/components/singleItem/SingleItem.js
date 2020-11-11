@@ -45,6 +45,15 @@ function SingleItem(props) {
                   </div>
                 </div>
               </div>
+              <div className="rating">
+                  <h5>Rating:</h5>
+              </div>
+              <div className="last">
+                  <div className="item">
+                    <h5>Último quadrinho:</h5>
+                  </div>
+                  <div> 13 fev. 2020</div>
+              </div>
             </div>
             <div className="right-item">
               <img src={ props.image } alt={ props.name } description={props.description} />

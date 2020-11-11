@@ -7,6 +7,7 @@
             .left-item {
                 max-width: 350px;
                 width: 100%;
+                margin-bottom: 70px;
                 header {
                     display: flex;
                     justify-content: space-between;
@@ -25,13 +26,25 @@
                     justify-content: space-between;
                     padding-right: 70px;
                     margin-top: 50px;
-                    margin-bottom: 80px;
+                    margin-bottom: 35px;
                     .item {
                         display: flex;
                         flex-direction: column;
                         .icon {
                             margin-right: 20px;
                         }
+                    }
+                }
+                .rating {
+                    margin-bottom: 35px;
+                    display: flex;
+                    align-items: center;
+                }
+                .last {
+                    display: flex;
+                    align-items: center;
+                    .item {
+                        margin-right: 15px;
                     }
                 }
             }
