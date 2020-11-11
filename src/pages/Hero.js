@@ -1,9 +1,7 @@
   import React, { useState, useEffect } from 'react';
   import Footer from '../layout/footer/Footer';
-  import Header from '../layout/header/Header';
-  import GridContainer from '../components/gridContainer/GridContainer';
+  import Header from '../layout/header/HeaderV2';
   import SingleItem from '../components/singleItem/SingleItem';
-  import Search from '../components/search/Search.js';
   import axios from 'axios';
   import Helmet from 'react-helmet';
   import { useParams } from "react-router-dom";
@@ -47,7 +45,7 @@
               storiesListLength={ storiesList.length }
               seriesListLength={ seriesList.length }
               image={hero.thumbnail.path+'.'+hero.thumbnail.extension}
-              storiesList={storiesList}
+              storiesList={storiesList.slice(0, 10)}
             />
           </React.StrictMode>
         )

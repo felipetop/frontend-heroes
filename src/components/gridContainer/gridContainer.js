@@ -26,10 +26,10 @@ const Container = styled.div`
       max-width: 100%;
       width: 100%;
       padding: 
-    0px
-    ${props => props.horizontalMarginItemMobile}px 
-    ${props => props.bottomMarginItem}px 
-    ${props => props.horizontalMarginItemMobile}px;
+      0px
+      ${props => props.horizontalMarginItemMobile}px 
+      ${props => props.bottomMarginItem}px 
+      ${props => props.horizontalMarginItemMobile}px;
     }
   }
 `;

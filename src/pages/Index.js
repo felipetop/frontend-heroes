@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../layout/footer/Footer';
-import Header from '../layout/header/Header';
+import Header from '../layout/header/HeaderV1';
 import GridContainer from '../components/gridContainer/GridContainer';
 import Item from '../components/item/Item';
 import Search from '../components/search/Search.js';

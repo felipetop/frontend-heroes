@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from '../layout/footer/Footer';
-import Header from '../layout/header/Header';
+import Header from '../layout/header/HeaderV1';
 import { NavLink } from 'react-router-dom';
 
 class NoMatch extends Component {

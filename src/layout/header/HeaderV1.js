@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../assets/images/logo/Marvel.svg';
+import logo from '../../assets/images/logo/Marvel-Logo.png';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
