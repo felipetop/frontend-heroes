@@ -1,6 +1,10 @@
 .FrontendHeroes {
     font-family: WorkSans, Arial, Helvetica, sans-serif;
-    margin-top: 15px;
+    padding-top: 15px;
+
+    &.background-grey {
+        background-color: $hero-color-tertiary;
+    }
 
     h1 {
         font-size: 2em;

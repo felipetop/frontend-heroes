@@ -6,7 +6,7 @@ function CheckboxHeart(props) {
       <div className={props.className}>
           <input 
             type="checkbox"
-            class='red-heart-checkbox' type='checkbox'
+            className='red-heart-checkbox' type='checkbox'
             id={props.id}
             checked={!checked}
             onChange={() => setChecked(!checked)}
