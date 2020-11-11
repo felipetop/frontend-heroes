@@ -28,5 +28,14 @@
                 }
             }
         }
+        @media(max-width: 800px) {
+            flex-direction: column;
+            .column {
+                justify-content: space-between;
+                height: 40px;
+                &.grey {
+                }
+            }
+        }
     }
 }

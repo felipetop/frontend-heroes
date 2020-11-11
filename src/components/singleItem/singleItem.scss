@@ -36,6 +36,12 @@
                     border-radius: 10px;
                 }
             }
+            @media(max-width: 800px) {
+                flex-direction: column;
+                .left-item {
+                    max-width: 100%;
+                }
+            }
         }
         .lancamentos {
             margin-top: 90px;
