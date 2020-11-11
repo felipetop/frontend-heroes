@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import GridContainer from '../../components/gridContainer/GridContainer'
+import GridContainer from '../gridContainer/GridContainer'
 import CheckboxHeart from '../../components/checkboxHeart/CheckboxHeart'
 import Stories from '../../components/stories/Stories'
-import Item from '../../components/item/Item'
 import storieImage from '../../assets/images/stories/example.jpg'
 
 function SingleItem(props) {
