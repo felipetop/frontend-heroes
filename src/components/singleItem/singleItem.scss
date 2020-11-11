@@ -1,6 +1,19 @@
 .FrontendHeroes {
     .SingleItem {
+        z-index: 1;
+        .white-font {
+            position: fixed;
+            color: #fff;
+            font-weight: 200px;
+            font-size: 100px;
+            z-index: 2;
+            margin-top: 100px;
+            margin-left: 80px;
+            text-transform: uppercase;
+        }
         .details {
+            position: relative;
+            z-index: 3;
             display: flex;
             justify-content: space-between;
 
@@ -55,6 +68,7 @@
                     margin-top: -30px;
                     width: 100%;
                     border-radius: 10px;
+                    z-index: 1;
                 }
             }
             @media(max-width: 800px) {
@@ -65,6 +79,8 @@
             }
         }
         .lancamentos {
+            position: relative;
+            z-index: 3;
             margin-top: 90px;
         }
     }

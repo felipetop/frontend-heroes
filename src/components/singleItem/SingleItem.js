@@ -10,6 +10,7 @@ function SingleItem(props) {
     return (
       <div className={props.className}>
         <section className="SingleItem">
+          <div className="white-font">{ props.name }</div>
           <div className="details">
             <div className="left-item">
               <header>
