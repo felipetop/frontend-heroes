@@ -23,8 +23,16 @@
                 .item-data {
                     display: flex;
                     justify-content: space-between;
-                    padding-right: 30px;
+                    padding-right: 70px;
                     margin-top: 50px;
+                    margin-bottom: 80px;
+                    .item {
+                        display: flex;
+                        flex-direction: column;
+                        .icon {
+                            margin-right: 20px;
+                        }
+                    }
                 }
             }
 

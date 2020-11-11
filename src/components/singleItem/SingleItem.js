@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import GridContainer from '../gridContainer/GridContainer'
-import CheckboxHeart from '../../components/checkboxHeart/CheckboxHeart'
-import Stories from '../../components/stories/Stories'
+import CheckboxHeart from '../checkboxHeart/CheckboxHeart'
+import Stories from '../stories/Stories'
 import storieImage from '../../assets/images/stories/example.jpg'
+import book from '../../assets/images/book/Group.png'
+import video from '../../assets/images/video/Shape.png'
 
 function SingleItem(props) {
     return (
@@ -16,11 +18,31 @@ function SingleItem(props) {
               </header>
               <p>{ props.description }</p>
               <div className="item-data">
-                <div>
-                  Quadrinhos { props.storiesListLength }
+                <div className="item">
+                  <div>
+                    <h5>Quadrinhos</h5>
+                  </div>
+                  <div>
+                    <span className="icon">
+                      <img src={book} />
+                    </span>
+                    <span>
+                      { props.storiesListLength }
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  Filmes { props.seriesListLength }
+                <div className="item">
+                  <div>
+                    <h5>Filmes</h5>
+                  </div>
+                  <div>
+                    <span className="icon">
+                      <img src={video} />
+                    </span>
+                    <span>
+                      { props.seriesListLength }
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
