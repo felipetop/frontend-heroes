@@ -1,11 +1,7 @@
 .FrontendHeroes {
-    .Item {
+    .Stories {
         img {
             width: 100%;
-            border-bottom: solid 5px $hero-color-primary;
-            min-height: 253px;
-            max-height: 253px;
-            object-fit: cover;
         }
         .itemText {
             display: flex;

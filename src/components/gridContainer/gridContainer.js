@@ -8,15 +8,29 @@ const Container = styled.div`
   margin-right: -${props => props.horizontalMarginItem}px;
   grid-template-columns: repeat(${props => props.grids}, 1fr);
   >* {
-    margin: 
+    padding: 
     0px
     ${props => props.horizontalMarginItem}px 
     ${props => props.bottomMarginItem}px 
     ${props => props.horizontalMarginItem}px;
+    max-width: ${props => props.maxWidth}px;
+    width: 100%;
   }
   @media(max-width: 800px) {
     grid-template-columns: repeat(${props => props.mobileGrids}, 1fr);
     margin: 0px;
+    margin-top: ${props => props.topMargin}px;
+    >:nth-child(${props => props.mobileGrids}n+1){padding-left: 0px;}
+    >:nth-child(${props => props.mobileGrids}n+${props => props.mobileGrids}){padding-right:0px;}
+    >* {
+      max-width: 100%;
+      width: 100%;
+      padding: 
+    0px
+    ${props => props.horizontalMarginItemMobile}px 
+    ${props => props.bottomMarginItem}px 
+    ${props => props.horizontalMarginItemMobile}px;
+    }
   }
 `;
 
@@ -25,9 +39,11 @@ function GridContainer(props) {
     <Container 
       grids={props.grids}
       horizontalMarginItem={props.horizontalMarginItem}
-      bottomMarginItem={props.bottomMarginItem}
+      bottomMarginItem={props.bottomMarginItem}gi
       mobileGrids={props.mobileGrids}
       topMargin={props.topMargin}
+      maxWidth={props.maxWidth}
+      horizontalMarginItemMobile={props.horizontalMarginItemMobile}
     >
       {props.children}
     </Container>

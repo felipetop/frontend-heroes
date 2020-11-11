@@ -2,24 +2,21 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import CheckboxHeart from '../checkboxHeart/CheckboxHeart';
 
-function Item(props) {
+function Stories(props) {
     const [checked, setChecked] = useState(false);
     return (
-      <div className="Item">
+      <div className="Stories">
         <div>
-          <NavLink to={{pathname: `/hero/${props.id}`}}>
+          <div>
             <img src={props.image} alt={ props.name } description={props.description} />
-          </NavLink>
+          </div>
           <div className="itemText"> 
             <h3>{props.name}</h3>
-            <div>
-              <CheckboxHeart size={20} id={props.id} />
-            </div>
           </div>
         </div>
       </div>
     );
 }
   
-export default Item;
+export default Stories;
   
