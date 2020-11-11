@@ -1,0 +1,34 @@
+.FrontendHeroes {
+    .SingleItem {
+        .details {
+            display: flex;
+            justify-content: space-between;
+
+            .left-item {
+                max-width: 350px;
+                p {
+                    line-height: 30px;
+                    margin-top: 30px;
+                }
+                .item-data {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 30px;
+                    margin-top: 50px;
+                }
+            }
+
+            .right-item {
+                max-width: 700px;
+                img {
+                    margin-top: -30px;
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .lancamentos {
+            margin-top: 90px;
+        }
+    }
+}

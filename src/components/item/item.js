@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import CheckboxHeart from '../checkboxHeart/CheckboxHeart';
 
-function Panel(props) {
+function Item(props) {
     const [checked, setChecked] = useState(false);
     return (
-      <div className="Item">
+      <div className="item">
         <div>
           <NavLink to={{pathname: `/hero/${props.id}`}}>
             <img src={props.image}/>
@@ -21,5 +21,5 @@ function Panel(props) {
     );
 }
   
-export default Panel;
+export default Item;
   

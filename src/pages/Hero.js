@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../layout/footer/Footer';
 import Header from '../layout/header/Header';
 import GridContainer from '../components/gridContainer/GridContainer';
+import SingleItem from '../components/singleItem/SingleItem';
 import Search from '../components/search/Search.js';
 import axios from 'axios';
 import Helmet from 'react-helmet';
-import { Match } from 'react-router-dom';
 
 function Index(props) {
   const [heroList, setHeroList] = useState([]);
@@ -30,43 +30,27 @@ function Index(props) {
   const renderHeroes = () => {
     return heroList.map((hero) => {
       return (
-        <div>
-          <div>
-            <div>
-              <h1>{ hero.name }</h1>
-              <p>{ hero.description }</p>
-              <div>
-                <div>
-                  Quadrinhos { storiesList.length}
-                </div>
-                <div>
-                  Filmes { seriesList.length}
-                </div>
-              </div>
-            </div>
-            <div>
-              <img src={hero.thumbnail.path+'.'+hero.thumbnail.extension}/>
-            </div>
-          </div>
-          <GridContainer grids={6} mobileGrids={3} verticalMargin={5} horizontalMargin={30} bottomMargin={50}>
-          {storiesList.map(function (storie) {
-            return (
-              <div>a{storie.name}</div>
-            );
-          })}
-          </GridContainer>
-        </div>
+        <React.StrictMode>
+          <Helmet>
+            <title>{ hero.name }</title>
+            <meta name="description" content={ hero.description } />
+            <meta name="keywords" content="Marvel, Heróis, Personagens, Clássicos, Heróis da Marvel, Site Marvel" />
+          </Helmet>
+          <SingleItem
+            name={ hero.name }
+            description={ hero.description }
+            storiesListLength={ storiesList.length }
+            seriesListLength={ seriesList.length }
+            image={hero.thumbnail.path+'.'+hero.thumbnail.extension}
+            storiesList={storiesList}
+          />
+        </React.StrictMode>
       )
     });
   }
 
   return (
     <React.StrictMode>
-      <Helmet>
-          <title>Frontend Heroes</title>
-          <meta name="description" content="Mergulhe no domínio deslumbrante de todos os personagens clássicos da Marvel que você ama - e aqueles que você descobrirá em breve!" />
-          <meta name="keywords" content="Marvel, Heróis, Personagens, Clássicos, Heróis da Marvel, Site Marvel" />
-      </Helmet>
       <div className="FrontendHeroes background-grey">
         <Header className="container"/>
         <section className="container">
