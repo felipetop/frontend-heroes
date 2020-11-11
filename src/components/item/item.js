@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import CheckboxHeart from '../checkboxHeart/CheckboxHeart';
 
 function Panel(props) {
     const [checked, setChecked] = useState(false);
@@ -12,10 +13,7 @@ function Panel(props) {
           <div className="itemText"> 
             <h3>{props.name}</h3>
             <div>
-              <input type="checkbox"
-                checked={checked}
-                onChange={() => setChecked(!checked)}
-              />
+              <CheckboxHeart id={props.id} />
             </div>
           </div>
         </div>

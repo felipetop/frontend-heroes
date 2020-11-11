@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './panel.scss';
+import CheckboxHeart from '../checkboxHeart/CheckboxHeart';
 
 function Panel(props) {
   const [checked, setChecked] = useState(false);
@@ -9,13 +9,7 @@ function Panel(props) {
         <div className="column grey">Encontrados 20 heróis</div>
         <div className="column">
           <div>Ordernar por nome - A/Z</div>
-          <div>
-            <input type="checkbox"
-              checked={checked}
-              onChange={() => setChecked(!checked)}
-            />
-          </div>
-          <div>Somente favoritos</div>
+          <div> <CheckboxHeart className="mr-10" id="favoritos" /> Somente favoritos</div>
         </div>
       </aside>
     </div>

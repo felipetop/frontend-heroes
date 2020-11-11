@@ -1,0 +1,44 @@
+.FrontendHeroes {
+    .red-heart-checkbox {
+        visibility: hidden;
+        + {
+            label {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                padding-left: 15px;
+                transition: all 0.2s;
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                    content: "";
+                    position: absolute;
+                    margin-left: -20px;
+                    margin-top: -3px;
+                    background-image: url('./Path@2x.png');
+                    background-size: 20px 20px;
+                }
+                &:hover {
+                    &:before {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        &:checked {
+            + {
+                label {
+                    &:before {
+                        height: 20px;
+                        width: 20px;
+                        background-image: url('./PathDisabled2@2x.png');
+                        background-size: 20px 20px;
+                    }
+                }
+            }
+        }
+    }    
+}

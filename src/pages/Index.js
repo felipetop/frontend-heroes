@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../layout/footer/Footer';
 import Header from '../layout/header/Header';
-import GridContainer from '../components/gridContainer/gridContainer';
-import Item from '../components/item/item';
-import Search from '../components/search/search.js';
-import Panel from '../components/panel/panel.js';
+import GridContainer from '../components/gridContainer/GridContainer';
+import Item from '../components/item/Item';
+import Search from '../components/search/Search.js';
+import Panel from '../components/panel/Panel.js';
 import axios from 'axios';
 import Helmet from 'react-helmet';
 
