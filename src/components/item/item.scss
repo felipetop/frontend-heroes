@@ -10,6 +10,10 @@
                 min-height: 153px;
                 max-height: 153px;
             }
+            @media(max-width: 350px) {
+                min-height: 203px;
+                max-height: 203px;
+            }
         }
         .itemText {
             display: flex;

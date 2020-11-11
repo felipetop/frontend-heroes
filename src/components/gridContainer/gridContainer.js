@@ -31,6 +31,9 @@ const Container = styled.div`
       ${props => props.bottomMarginItem}px 
       ${props => props.horizontalMarginItemMobile}px;
     }
+    @media(max-width: 350px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 
