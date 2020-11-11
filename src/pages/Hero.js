@@ -6,14 +6,16 @@ import SingleItem from '../components/singleItem/SingleItem';
 import Search from '../components/search/Search.js';
 import axios from 'axios';
 import Helmet from 'react-helmet';
+import { useParams } from "react-router-dom";
 
 function Index(props) {
   const [heroList, setHeroList] = useState([]);
   const [storiesList, setStoriesList] = useState([]);
   const [seriesList, setSeriesList] = useState([]);
+  let { heroId } = useParams();
 
   useEffect(() => {
-    axios.get(`https://gateway.marvel.com/v1/public/characters/1017100?ts=1&limit=20&apikey=edc13921ce2d3563dcd2a150281f5c23&hash=1acefe488f2631cef41c7443649d0483`)
+    axios.get(`https://gateway.marvel.com/v1/public/characters/${heroId}?ts=1&limit=20&apikey=edc13921ce2d3563dcd2a150281f5c23&hash=1acefe488f2631cef41c7443649d0483`)
     .then(function (response) {
       // handle success
       console.log(response.data.data.results);
