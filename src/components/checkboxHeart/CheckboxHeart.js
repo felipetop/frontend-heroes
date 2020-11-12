@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from "styled-components";
-import activeHeart from './Path@2x.png';
-import disabledHeart from './PathDisabled2@2x.png';
+import disabledHeart from './Path@2x.png';
+import activeHeart from './PathDisabled2@2x.png';
 
 const HeartCheckbox = styled.div`
 .heart-checkbox {
@@ -51,18 +51,15 @@ const HeartCheckbox = styled.div`
 `;
 
 function CheckboxHeart(props) {
-    const [checked, setChecked] = useState(false);
-  
     return (
       <div className={props.className}>
           <HeartCheckbox size={props.size}>
             <div className="heart-checkbox">
               <input 
                 type="checkbox"
-                className='red-heart-checkbox' type='checkbox'
+                className='red-heart-checkbox'
                 id={props.id}
-                checked={!checked}
-                onChange={() => setChecked(!checked)}
+                onChange={() => props.action(props.hero)}
               />
               <label htmlFor={props.id}>
               </label>

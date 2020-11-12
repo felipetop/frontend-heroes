@@ -64,7 +64,7 @@ import Search from '../components/search/Search';
       <React.StrictMode>
         <div className="FrontendHeroes background-grey">
           <Header className="container">
-            <Search className="white" />
+            <Search className="white" searchHero={() => {}} />
           </Header>
           {renderHeroes()}
           <Footer/>

@@ -15,7 +15,7 @@ function SingleItem(props) {
             <div className="left-item">
               <header>
                 <h1>{ props.name }</h1>
-                <CheckboxHeart size={30} id={props.id} />
+                <CheckboxHeart size={30} id={props.id} action={() => {}} />
               </header>
               <p>{ props.description }</p>
               <div className="item-data">

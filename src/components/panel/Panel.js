@@ -9,7 +9,7 @@ function Panel(props) {
         <div className="column grey">Encontrados 20 heróis</div>
         <div className="column">
           <div className="pointer" onClick={() => props.changeOrder()}>Ordernar por nome - A/Z</div>
-          <div> <CheckboxHeart size={20} className="mr-10" id="favoritos" /> Somente favoritos</div>
+          <div> <CheckboxHeart size={20} className="mr-10" id="favoritos" action={props.showFavOnly} /> Somente favoritos</div>
         </div>
       </aside>
     </div>
