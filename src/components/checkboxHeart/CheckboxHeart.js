@@ -63,7 +63,6 @@ function CheckboxHeart(props) {
   
     return (
       <div className={props.className}>
-          {renderHeroes()}
           <HeartCheckbox size={props.size}>
             <div className="heart-checkbox">
               <input 
