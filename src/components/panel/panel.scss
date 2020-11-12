@@ -7,6 +7,10 @@
             display: flex;
             color: #fa7c7c;
             font-weight: 600;
+            
+            .pointer {
+                cursor: pointer;
+            }
 
             &.grey {
                 color: #c1c1c1;

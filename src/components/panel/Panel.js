@@ -8,7 +8,7 @@ function Panel(props) {
       <aside className="Panel">
         <div className="column grey">Encontrados 20 heróis</div>
         <div className="column">
-          <div>Ordernar por nome - A/Z</div>
+          <div className="pointer" onClick={() => props.changeOrder()}>Ordernar por nome - A/Z</div>
           <div> <CheckboxHeart size={20} className="mr-10" id="favoritos" /> Somente favoritos</div>
         </div>
       </aside>
