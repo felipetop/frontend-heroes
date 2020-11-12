@@ -1,0 +1,35 @@
+.FrontendHeroes {
+    .StarRating {
+        margin-top: -2px;
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 1.5em;
+        justify-content: space-around;
+        padding: 0 .2em;
+        text-align: center;
+        width: 5em;
+        input {
+            display: none;
+            &:checked {
+                ~ {
+                    background-color: $hero-color-primary;
+                    label {
+                        color: $hero-color-primary;
+                    }
+                }
+            }
+        }
+        label {
+            color: #ccc;
+            cursor: pointer;
+            &:hover {
+                color: $hero-color-primary;
+                ~ {
+                    label {
+                        color: $hero-color-primary;
+                    }
+                }
+            }
+        }
+    }
+}

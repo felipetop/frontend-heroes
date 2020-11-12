@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import GridContainer from '../gridContainer/GridContainer'
 import CheckboxHeart from '../checkboxHeart/CheckboxHeart'
 import Stories from '../stories/Stories'
+import StarRating from '../rating/Rating'
 import storieImage from '../../assets/images/stories/example.jpg'
 import book from '../../assets/images/book/Group.png'
 import video from '../../assets/images/video/Shape.png'
@@ -47,7 +48,12 @@ function SingleItem(props) {
                 </div>
               </div>
               <div className="rating">
-                  <h5>Rating:</h5>
+                  <div className="item">
+                    <h5>Rating:</h5>
+                  </div>
+                  <div>
+                    <StarRating />
+                  </div>
               </div>
               <div className="last">
                   <div className="item">
