@@ -3,7 +3,6 @@ import GridContainer from '../gridContainer/GridContainer'
 import CheckboxHeart from '../checkboxHeart/CheckboxHeart'
 import Stories from '../stories/Stories'
 import StarRating from '../rating/Rating'
-import storieImage from '../../assets/images/stories/example.jpg'
 import book from '../../assets/images/book/Group.png'
 import video from '../../assets/images/video/Shape.png'
 
@@ -68,10 +67,10 @@ function SingleItem(props) {
           </div>
           <div className="lancamentos">
             <h2>Últimos lançamentos</h2>
-            <GridContainer maxWidth={150} grids={6} mobileGrids={2} topMargin={80} horizontalMarginItemMobile={5} bottomMarginItem={50}>
-              {props.storiesList.map(function (storie) {
+            <GridContainer maxWidth={250} grids={6} mobileGrids={2} topMargin={80} horizontalMarginItem={30} horizontalMarginItemMobile={5} bottomMarginItem={30}>
+              {props.comicsList.map(function (comic) {
                 return (
-                  <Stories image={storieImage} name={storie.name} />
+                  <Stories image={comic.thumbnail.path+'.'+comic.thumbnail.extension} name={comic.title} />
                 );
               })}
             </GridContainer>

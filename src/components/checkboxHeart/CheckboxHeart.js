@@ -52,13 +52,6 @@ const HeartCheckbox = styled.div`
 
 function CheckboxHeart(props) {
     const [checked, setChecked] = useState(false);
-    const [heroList, setHeroList] = useState([]);
-    
-    const renderHeroes = () => {
-        return (
-            <div>{heroList}</div>
-        )
-      }
   
     return (
       <div className={props.className}>
@@ -69,10 +62,7 @@ function CheckboxHeart(props) {
                 className='red-heart-checkbox' type='checkbox'
                 id={props.id}
                 checked={!checked}
-                onChange={() => {
-                    setChecked(!checked);
-                    setHeroList(...heroList, [props.id]);
-                }}
+                onChange={() => setChecked(!checked)}
               />
               <label htmlFor={props.id}>
               </label>
