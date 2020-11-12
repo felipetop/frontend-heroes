@@ -1,13 +1,25 @@
-import icon from './icon.png';
+import React from "react";
+import { debounce } from "throttle-debounce";
+
+import icon from "./icon.png";
 
 function Search(props) {
-    return (
-      <div className={`Search ${props.className}`}>
-          <div className="icon"><img src={icon}/></div>
-          <input type="text" placeholder="Procure por heróis"/>
+  const debounceFunc = debounce(400, (e) => {
+    props.searchHero(e);
+  });
+
+  return (
+    <div className={`Search ${props.className}`}>
+      <div className="icon">
+        <img src={icon} />
       </div>
-    );
+      <input
+        type="text"
+        onChange={(e) => debounceFunc(e)}
+        placeholder="Procure por heróis"
+      />
+    </div>
+  );
 }
-  
+
 export default Search;
-  

@@ -55,7 +55,6 @@ function CheckboxHeart(props) {
     const [heroList, setHeroList] = useState([]);
     
     const renderHeroes = () => {
-        console.log("herolist",heroList);
         return (
             <div>{heroList}</div>
         )

@@ -10,19 +10,23 @@ import Helmet from 'react-helmet';
 
 function Index() {
   const [heroList, setHeroList] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const searchHero = (event) => {
+    setSearchTerm(event.target.value);
+  }
 
   useEffect(() => {
-    axios.get('https://gateway.marvel.com/v1/public/characters?ts=1&limit=20&apikey=edc13921ce2d3563dcd2a150281f5c23&hash=1acefe488f2631cef41c7443649d0483')
+    axios.get(`https://gateway.marvel.com/v1/public/characters?ts=1&limit=20&apikey=edc13921ce2d3563dcd2a150281f5c23&hash=1acefe488f2631cef41c7443649d0483${searchTerm ? '&nameStartsWith='+ searchTerm : ''}`)
     .then(function (response) {
       // handle success
-      console.log(response.data.data.results);
       setHeroList(response.data.data.results)
     })
     .catch(function (error) {
       // handle error
       console.log(error);
     })
-  }, []);
+  }, [searchTerm]);
 
   const renderHeroes = () => {
     return heroList.map((hero) => {
@@ -47,7 +51,7 @@ function Index() {
             Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - 
             e aqueles que você descobrirá em breve!
           </p>
-          <Search/>
+          <Search searchHero={searchHero}/>
         </Header>
         <Panel className="container mt-50" />
         <section className="container">
