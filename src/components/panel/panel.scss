@@ -3,13 +3,30 @@
         display: flex;
         justify-content: space-between;
 
+       
+        
         .column {
             display: flex;
+            align-items: center;
+            justify-content: center;
             color: #fa7c7c;
-            font-weight: 600;
-            
+            font-weight: 600;        
             .pointer {
-                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media(max-width: 800px) {
+                    .toggle {margin-top: 4px;}
+                    .hidden-mobile {
+                        display: none;
+                    }
+                }
+            }
+
+            @media(max-width: 800px) {
+                .heart {
+                    margin-top: 6px;
+                }
             }
 
             &.grey {
@@ -19,7 +36,7 @@
             }
 
             * {
-                padding: 0px 20px;
+                padding: 0px 30px;
                 display: flex;
                 &.has-icon {
                     margin-left: 20px;
@@ -37,6 +54,7 @@
             .column {
                 justify-content: space-between;
                 height: 40px;
+                font-size: 14px;
                 &.grey {
                     margin-top: 10px;
                     font-size: 14px;
