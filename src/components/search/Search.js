@@ -1,6 +1,5 @@
 import React from "react";
 import { debounce } from "throttle-debounce";
-
 import icon from "./icon.png";
 
 function Search(props) {
@@ -11,7 +10,7 @@ function Search(props) {
   return (
     <div className={`Search ${props.className}`}>
       <div className="icon">
-        <img src={icon} />
+        <img src={icon} alt="Icon Search"  />
       </div>
       <input
         type="text"

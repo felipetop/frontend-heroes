@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from "styled-components";
 import disabledHeart from './Path@2x.png';
 import activeHeart from './PathDisabled2@2x.png';

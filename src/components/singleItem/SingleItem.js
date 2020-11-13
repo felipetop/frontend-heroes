@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GridContainer from '../gridContainer/GridContainer'
 import CheckboxHeart from '../checkboxHeart/CheckboxHeart'
 import Stories from '../stories/Stories'
@@ -25,7 +25,7 @@ function SingleItem(props) {
                   </div>
                   <div>
                     <span className="icon">
-                      <img src={book} />
+                      <img src={book} alt="Icon Book" />
                     </span>
                     <span>
                       { props.storiesListLength }
@@ -38,7 +38,7 @@ function SingleItem(props) {
                   </div>
                   <div>
                     <span className="icon">
-                      <img src={video} />
+                      <img src={video} alt="Icon Video" />
                     </span>
                     <span>
                       { props.seriesListLength }

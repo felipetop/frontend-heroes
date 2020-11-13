@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Item(props) {
-    const [checked, setChecked] = useState(false);
+function Item() {
     return (
       <div className="StarRating">
         <input  type="radio" id="5-stars" name="rating" value="5" />

@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import CheckboxHeart from '../checkboxHeart/CheckboxHeart';
+import React from 'react';
 
 function Stories(props) {
-    const [checked, setChecked] = useState(false);
     return (
       <div className="Stories">
         <div>
