@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Item(props) {
     const [checked, setChecked] = useState(false);
     return (
-      <div class="StarRating">
+      <div className="StarRating">
         <input  type="radio" id="5-stars" name="rating" value="5" />
         <label htmlFor="5-stars" className="star">&#9733;</label>
         <input type="radio" id="4-stars" name="rating" value="4" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import disabledHeart from './Path@2x.png';
 import activeHeart from './PathDisabled2@2x.png';
@@ -59,7 +59,10 @@ function CheckboxHeart(props) {
                 type="checkbox"
                 className='red-heart-checkbox'
                 id={props.id}
-                onChange={() => props.action(props.hero)}
+                checked={props.isChecked}
+                onChange={() => {
+                    props.action(props.hero);
+                }}
               />
               <label htmlFor={props.id}>
               </label>

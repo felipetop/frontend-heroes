@@ -12,7 +12,7 @@ function Item(props) {
           <div className="itemText"> 
             <h3>{props.hero.name}</h3>
             <div>
-              <CheckboxHeart action={props.favItem} size={20} id={props.hero.id} hero={props.hero} />
+              <CheckboxHeart isChecked={props.isChecked} action={props.favItem} size={20} id={props.hero.id} hero={props.hero} />
             </div>
           </div>
         </div>

@@ -39,6 +39,16 @@ function Index() {
     }
   };
 
+  const isFavorite = (heroToCheck) => {
+    let isFavorite = false;
+    favList.forEach((hero) => {
+      if (heroToCheck.id === hero.id) {
+        isFavorite = true;
+      }
+    });
+    return isFavorite;
+  };
+
   const showFavOnly = () => {
     setShowFavorites(!showFavorites);
   };
@@ -60,7 +70,7 @@ function Index() {
     return heroList.map((hero) => {
       return (
         <div>
-          <Item favItem={addList} hero={hero} />
+          <Item key={hero.id} isChecked={isFavorite(hero)} favItem={addList} hero={hero} />
         </div>
       );
     });
@@ -70,7 +80,7 @@ function Index() {
     return favList.map((hero) => {
       return (
         <div>
-          <Item favItem={addList} hero={hero} />
+          <Item key={hero.id} isChecked={isFavorite(hero)} favList={favList} favItem={addList} hero={hero} />
         </div>
       );
     });
