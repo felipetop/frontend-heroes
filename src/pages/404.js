@@ -10,7 +10,7 @@ class NoMatch extends Component {
         <Header title="404 - Pagina nao encontrada"/>
         <section className="container mt-50">
           <p className="text-center">
-            Página não encontrada, para voltar clique <NavLink exatc to="./">aqui.</NavLink>
+            Página não encontrada, para voltar clique <NavLink exact to="./">aqui.</NavLink>
           </p>
         </section>
         <Footer/>

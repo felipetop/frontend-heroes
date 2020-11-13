@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className={this.props.className}>
         <header className="Header-v1">
-          <NavLink exatc to="/">
+          <NavLink exact to="/">
             <img className="center logo marvel" src={logo} alt="Logo da Marvel" description="Marvel logotipo" />
           </NavLink>
           <h1 className="text-center">{this.props.title}</h1>

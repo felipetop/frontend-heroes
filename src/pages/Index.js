@@ -57,11 +57,9 @@ function Index() {
     axios
       .get(`https://gateway.marvel.com/v1/public/characters?ts=1&limit=20${searchTerm ? "&nameStartsWith=" + searchTerm : ""}&orderBy=${searchOrder}&apikey=edc13921ce2d3563dcd2a150281f5c23&hash=1acefe488f2631cef41c7443649d0483`)
       .then(function (response) {
-        // handle success
         setHeroList(response.data.data.results);
       })
       .catch(function (error) {
-        // handle error
         console.log(error);
       });
   }, [searchTerm, searchOrder]);
@@ -69,8 +67,8 @@ function Index() {
   const renderHeroes = () => {
     return heroList.map((hero) => {
       return (
-        <div>
-          <Item key={hero.id} isChecked={isFavorite(hero)} favItem={addList} hero={hero} />
+        <div key={hero.id}>
+          <Item isChecked={isFavorite(hero)} favItem={addList} hero={hero} />
         </div>
       );
     });
@@ -79,8 +77,8 @@ function Index() {
   const renderFavs = () => {
     return favList.map((hero) => {
       return (
-        <div>
-          <Item key={hero.id} isChecked={isFavorite(hero)} favList={favList} favItem={addList} hero={hero} />
+        <div key={hero.id}>
+          <Item isChecked={isFavorite(hero)} favList={favList} favItem={addList} hero={hero} />
         </div>
       );
     });
