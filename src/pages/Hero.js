@@ -8,7 +8,7 @@
 import Search from '../components/search/Search';
 
   function Index(props) {
-    const { heroId } = useParams();
+    let { heroId } = useParams();
     const [heroList, setHeroList] = useState([]);
     const [storiesList, setStoriesList] = useState([]);
     const [seriesList, setSeriesList] = useState([]);

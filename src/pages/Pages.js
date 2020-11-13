@@ -9,7 +9,8 @@ function Pages(props) {
     <BrowserRouter>
       <Switch>
           <Route path="/" exact render={() => <Index/> } />
-     
+          <Route path="/hero/:heroId" exact render={() => <Hero/> } />
+          <Route component={NoMatch} />
       </Switch>
     </BrowserRouter>
   );
